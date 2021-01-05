@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head><title>sign up page</title>
+
+<script>
+function validateform(){
+var fname= document.forms["myform"]["f1"].value;
+var lname= document.getElementById("f2").value;
+var uname= document.getElementById("f4").value;
+var mobileno= document.getElementById("f5").value;
+var email= document.getElementById("f6").value;
+var psd= document.getElementById("f7").value;
+var rpt_psd= document.getElementById("f8").value;
+
+if(fname==''){
+alert('please fill in the field');
+
+}else if(lname==''){
+alert('please fill in the field');
+
+}else if(uname==''){
+alert('please fill in the field');
+
+}else if(mobileno==''){
+alert('please fill in the field');
+
+}else if(email!='email' && email=''){
+alert('please enter avalid email id');
+
+}else if(psd==''){
+alert('please fill in the field');
+
+}else if(rpt_psd==''){
+alert('please fill in the field');
+
+}
+else if (psd!=rpt_psd){
+alert("password does not match");
+}
+else
+{		{				                            
+ alert('Thank You for signin');
+return false;
+}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<nav>
+<a href="C:\Users\SOUMYA\Documents\signuppagewithjs.html" target="_self">sign up</a>|
+<a href="C:\Users\SOUMYA\Documents\login_page.html" target="_parent">login</a>
+</nav>
+
+<h2> <b> signup</b></h2>
+
+<form name="myform" action="/action_page.php"  method="post" accept-charset="utf-8" autocomplete="on">
+
+<fieldset>
+<legend>Personal info</legend>
+
+<b>FirstName: </b><input type="text" name="firstname" id="f1"><br><br>
+
+<b>LastName: </b><input type="text" name= "lastname" id="f2" ><br><br>
+
+<b>DateOfBirth:</b> <input type="date" name="dob" id="f3" required><br><br>
+
+</fieldset><br>
+<b>UserName: </b><input type="text" name="username" id="f4" ><br><br>
+<b>Mobile Number:</b> <input type="tel" id="f5" name="mobileno." pattern="[0-9]{10}"><br><br>
+
+
+<b>Email:</b> <input type="email" id="f6" placeholder="name@gmail.com" name="email" ><br><br>
+
+<b>Password:</b> <input type="password" id="f7" placeholder="enter password" name="psd" ><br><br>
+
+<b>Confirm Password:</b> <input type="password" id="f8" placeholder="repeat password" ><br><br>
+
+
+<b>Gender:</b> <input type="radio" name= "Gender" value= "Male">Male
+<input type="radio" name= "Gender" value= "Female">Female<br><br>
+
+<label for="describe"> <b>Describe Yourself:</b> </label><br><textarea id="describe" name="Describe yourself" rows="5" cols="50"></textarea>
+
+<p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a></p>
+
+<input type="submit" value="Submit" onClick="validateform()"></br>
+</form>
+
+
+</body>
+</html>

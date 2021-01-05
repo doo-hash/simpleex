@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width"/>
+<title>login page</title>
+<script>
+function validateform(){
+var uname=document.getElementById("uname").value;
+var psd=document.getElementById("psd").value;
+
+if(uname==''){
+alert('enter username!');
+}
+
+else if(psd==''){
+alert('enter password!');
+}
+else{
+alert('successfull!!');
+}
+}
+</script>
+<style>
+body
+{
+margin:auto; 
+background-color:#777777;
+color:#112711;
+}
+#main
+{
+width:500px; height:300px; 
+margin:auto;
+margin-top:100px;
+border-radius:20px;
+border:3px double #f7c5f1; 
+padding:30px;
+font-size:150%;
+font-weight:bold;
+}
+
+#main table
+{
+font-family:"Comic Sans MS";
+} 
+#main nav{
+margin:auto;
+margin-top:10px;
+padding:30px;
+font-size:150%;
+font-weight:bold;
+}
+#main .t1
+{
+height:30px;
+width:250px; 
+border:2px solid black;
+color:#a0afff;
+font-weight:bold;
+font-size:16px;
+}
+
+#main .btn
+{
+margin-top:20px;
+width:80px; height:40px; 
+font-weight:bold; 
+border:2px solid #27fea5;	
+border-radius: 2px;  
+color: #aeaaa5; 
+letter-spacing: 1px; 
+font-size:16px; 
+}
+  
+#main .btn:hover
+{
+background-color:#275475;
+border-radius: 2px; 
+color:#f1f1f1; 
+border:2px solid #f5f1f1;
+}
+</style>
+</head>
+
+
+<body>
+<div id="main">
+
+<nav>
+<a href="C:\Users\SOUMYA\Documents\signin_js.html" target="_self">sign up</a>|
+<a href="C:\Users\SOUMYA\Documents\Login_js.html" target="_parent">login</a>
+</nav>
+
+
+<table align="center">
+<tr>
+<td>username</td>
+<td><input type= "text" id="uname" placeholder="enter username" pattern="[A-Za-z]{20}" class="t1" ></td>
+</tr>
+<td><br></td>
+<tr>
+<td>password</td>
+<td><input type="password" id="psd" placeholder="enter password here" class="t1"></td>
+</tr>
+<td></td>
+<tr>
+<td></td>
+<td>
+<input type="submit" value= "login" onClick="validateform()" class="btn">
+<input type="submit" value="cancel" class="btn">
+</td>
+</tr>
+</table>
+<br>
+
+</div>
+</body>
+</html>

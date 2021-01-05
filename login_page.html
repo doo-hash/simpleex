@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing: border-box;}
+body {background-color:powderblue;margin-top:20px;}
+
+h1{color:blue;font-size:200%;}
+
+.container{
+	border:3px solid black;
+	width:35%;
+	padding:20px 20px;
+	margin:auto;
+	
+}
+
+
+input[type=email], input[type=password] {
+	width: 90%;
+	border: 3px solid #fca;
+	box-sizing: border-box;
+	padding:10px 25px;
+
+}
+
+p{
+	font-size:125%;
+}
+
+label{
+	font-size:100%;
+}
+
+button{
+	width: 90%;
+	color:#595;
+	font-size:125%;
+	margin-top:10px;
+}
+</style>
+<title> Login Page </title>
+</head>
+
+
+<body>
+<div class= "container">
+<h1 align="center">Login</h1>
+<form action= "/action-page.php" method="post">
+
+<label for="email" style="font-size:125%;"><b>Email</b></label>
+<input type="email" id= "email" placeholder="name@gmail.com" required><br>
+
+<label for="password" style="font-size:125%;"><b>Password</b></label>
+<input type="password" id= "password" placeholder="enter password" required><br>
+
+
+<button type="button">Login</button><br>
+
+<p>To register, Click here.</p>
+<a href="file:///C:/Users/SOUMYA/Documents/signup_page.html"><button type="button">Sign Up</button></a>
+
+<p>forget password, reset here..</p>
+<a href="#" style="font-size:125%;">Forget Password</a>
+
+</form>
+</div>
+
+</body>
+</html>

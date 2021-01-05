@@ -1,0 +1,158 @@
+<DOCTYPE html>
+<html>
+
+
+<head>
+<title>sign in page</title>
+<script>
+
+function validateform(){
+var fname= document.getElementById("f1").value;
+var lname= document.getElementById("f2").value;
+var dob= document.getElementById("f3").value;
+var uname= document.getElementById("f4").value;
+var mobileno= document.getElementById("f5").value;
+var eml= document.getElementById("f6").value;
+var psd = document.getElementById("f7").value;
+var rpt_psd= document.getElementById("f8").value;
+
+
+if(fname==''){
+alert('enter the first name!');
+}
+else if(lname==''){
+alert('enter the last name!');
+}
+else if(dob==''){
+alert('enter date of birth!');
+}
+else if(uname==''){
+alert('enter the username!');
+}
+else if(mobileno==''){
+alert('enter the mobile number!');
+}
+else if(mobileno.length>10){
+alert('only 10 numbers allowed!');
+}
+else if(eml==''){
+alert('enter the email!');
+}
+else if(psd==''){
+alert('enter the password!');
+}
+else if(rpt_psd==''){
+alert('confirm password!');
+}
+else if(psd!=rpt_psd){
+alert('password does not match!');
+}
+else{
+alert('signed in successfully');
+}
+
+}
+
+
+</script>
+<style>
+input:invalid{
+border-color:#acc;
+}
+input, input:valid{
+width: 90%;
+border: 3px solid #fca;
+border-radius:1px;
+box-sizing: border-box;
+padding:10px 25px;
+
+}
+*{
+box-sizing: border-box;
+
+}
+body {
+background-color:powderblue;margin-top:20px;
+}
+
+h2{
+color:blue;
+font-weight:bold;
+font-size:300%;
+}
+
+.frm {
+	border:3px solid;
+	border-color:#a12aac;
+	width:35%;
+	padding:20px 20px;
+	margin:auto;
+	
+}
+
+
+}
+
+input[type=radio]{
+margin:-150px;
+padding:50px;
+}
+p{
+font-size:125%;
+}
+
+label{
+font-size:100%;
+}
+
+submit{
+	width: 90%;
+	color:#595;
+	font-size:250%;
+	margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2 align="center"> <b> Sign In</b></h2>
+
+<div class="frm">
+<form name="myform" action=""  method="post" accept-charset="utf-8" autocomplete="on">
+
+<div class="prsnalinfo">
+
+<b>FirstName: </b><input type="text" name="firstname" id="f1" /><br><br>
+
+<b>LastName: </b><input type="text" name= "lastname" id="f2" /><br><br>
+
+<b>DateOfBirth:</b> <input type="date" name="dob" id="f3"/><br><br>
+
+</div>
+
+<br>
+<div class="info">
+<b>UserName: </b><input type="text" name="username" id="f4" /><br><br>
+<b>Mobile Number:</b> <input type="tel" id="f5" name="mobileno." pattern="[0-9]{10}"/><br><br>
+
+
+<b>Email:</b> <input type="email" id="f6" placeholder="name@gmail.com" name="email" /><br><br>
+
+<b>Password:</b> <input type="password" id="f7" placeholder="enter password" name="psd" pattern="[A-Z|a-z|0-9|@|#|$]{8}" title="should contain letters, numbers and special characters like @,#,$"/><br><br>
+
+<b>Confirm Password:</b> <input type="password" id="f8" placeholder="repeat password" pattern="[A-Za-z0-9@#$]{8}" title="should contain letters, numbers and special characters like @,#,$"/><br><br>
+
+
+</div>
+
+<p>By creating an account you agree to our <a href="#" style="color:blue">Terms & Privacy</a></p>
+
+<input type="submit" value="Submit" onClick="validateform()"/></br>
+
+</div>
+
+</form>
+</div>
+
+</body>
